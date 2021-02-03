@@ -6,7 +6,7 @@ public class Bowl {
 
     public Bowl() {
         Random random = new Random();
-        this.value = random.nextInt(70)+10;
+        this.value = random.nextInt(70) + 10;
     }
 
     public Bowl(int value) {
@@ -14,7 +14,9 @@ public class Bowl {
     }
 
     public void addValue(int addValue) {
-        this.value = value + addValue;
+        if (addValue > 0) {
+            this.value = value + addValue;
+        }
     }
 
     public void getValue() {
